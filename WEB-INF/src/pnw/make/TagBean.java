@@ -1,4 +1,4 @@
-package pnw.thread;
+package pnw.make;
 
 public class TagBean {
     private int id;

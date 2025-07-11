@@ -1,4 +1,4 @@
-package pnw.thread;
+package pnw.make;
 import java.sql.Timestamp;
 
 public class InfoBean {

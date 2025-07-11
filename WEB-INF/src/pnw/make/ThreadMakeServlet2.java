@@ -1,4 +1,4 @@
-package pnw.thread;
+package pnw.make;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -15,7 +15,7 @@ import javax.servlet.RequestDispatcher;
 
 import pnw.common.PnwDB;
 
-@WebServlet("/thread/ThreadMakeServlet2")
+@WebServlet("/make/ThreadMakeServlet2")
 
 public class ThreadMakeServlet2 extends HttpServlet{
     private static final long serialVersionUID = 1L;

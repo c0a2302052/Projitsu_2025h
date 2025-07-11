@@ -1,4 +1,4 @@
-package pnw.thread;
+package pnw.make;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.sql.PreparedStatement;
@@ -14,7 +14,7 @@ import javax.servlet.RequestDispatcher;
 
 import pnw.common.PnwDB;
 
-@WebServlet("/thread/MakeEntrance")
+@WebServlet("/make/MakeEntrance")
 public class ThreadMakeEntranceServlet extends HttpServlet{
     private static final long serialVersionUID = 1L;
 

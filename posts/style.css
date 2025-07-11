@@ -1,0 +1,85 @@
+body {
+  font-family: sans-serif;
+  background-color: #f8f8f8;
+  padding: 0;
+  margin: 0;
+}
+header {
+  background-color: #48d1f5;
+  color: black;
+  padding: 1em;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.container {
+  max-width: 600px;
+  margin: 2em auto;
+  background-color: white;
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+.thread-title {
+  color: red;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+.tag-container {
+  display: flex;
+  gap: 8px; /* タグの間に隙間を作る */
+  flex-wrap: wrap; /* 改行して次の行にも表示する場合はこれを追加 */
+}
+.tag {
+  background-color: #f0f0f0;
+  padding: 4px 10px;
+  border-radius: 12px;
+  display: inline-block;
+  font-size: 14px;
+  color: #333333;
+}
+.comment {
+  border: 1px solid #ddd;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+.comment-number {
+  font-weight: bold;
+  margin-bottom: 0.3em;
+}
+.like {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  color: #444;
+  font-size: 1em;
+}
+form {
+  margin-top: 2em;
+}
+label {
+  display: block;
+  margin: 1em 0 0.3em;
+}
+input[type="text"],
+textarea {
+  resize: none;
+  width: 100%;
+  padding: 0.5em;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+button {
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  background-color: #48d1f5;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #32b0cf;
+}

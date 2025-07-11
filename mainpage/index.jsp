@@ -134,7 +134,7 @@
         <div class="thread">
           <div><%= t.getResponseCount() %></div>
           <div>
-            <span class="thread-title"><%= t.getTitle() %></span><br/>
+            <span class="thread-title" href="http://10.204.227.55:8080/2025h/ThreadServlet?id="><%= t.getTitle() %></span><br/>
             <span class="tags">
               <%
                 for (String tag : t.getTags()) {

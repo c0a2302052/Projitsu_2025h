@@ -6,7 +6,7 @@ import javax.servlet.http.*;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/model/ThreadListServlet")
+@WebServlet("/mainpage/ThreadListServlet")
 public class ThreadListServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
@@ -23,7 +23,7 @@ public class ThreadListServlet extends HttpServlet {
         }
 
         request.setAttribute("threadList", threadList);
-        RequestDispatcher rd = request.getRequestDispatcher("/front/index.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("/mainpage/index.jsp");
         rd.forward(request, response);
 
     } catch (Exception e) {

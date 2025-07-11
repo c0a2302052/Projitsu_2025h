@@ -102,14 +102,16 @@
     <div class="header">TUT総合掲示板</div>
 
     <div class="top-bar">
-      <button class="create-btn" onclick="location.href='../make/MakeEntrance'">スレッド作成</button>
+      <form action="../make/MakeEntrance" method="post">
+        <button class="create-btn" type="submit">スレッド作成</button>
+      </form>
       <form class="search-box" action="#" method="get">
         <input type="text" name="q" placeholder="スレッド検索" />
       </form>
     </div>
 
     <div class="tag-bar">
-      <form action="ThreadListServlet" method="get">
+      <form action="./ThreadListServlet" method="get">
         <button type="submit" name="tag" value="1">#タグ1</button>
         <button type="submit" name="tag" value="2">#タグ2</button>
         <button type="submit" name="tag" value="3">#タグ3</button>

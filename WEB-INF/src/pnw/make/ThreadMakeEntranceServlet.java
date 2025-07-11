@@ -55,12 +55,12 @@ public class ThreadMakeEntranceServlet extends HttpServlet{
             }
 
             request.setAttribute("tag_info", infoArray);
-            forwardURL = "/thread/Thread_make_input3.jsp";
+            forwardURL = "/make/Thread_make_input3.jsp";
 
         } catch (Exception e) {
             e.printStackTrace();
             request.setAttribute("error_message", e.getMessage());
-            forwardURL = "/thread/error.jsp";
+            forwardURL = "/make/error.jsp";
         }
 
         // 表示ページへ転送

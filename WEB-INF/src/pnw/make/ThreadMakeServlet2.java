@@ -119,12 +119,12 @@ public class ThreadMakeServlet2 extends HttpServlet{
             }
 
             request.setAttribute("thread_info", infoArray);
-            forwardURL = "/thread/Thread_make.jsp";
+            forwardURL = "/make/Thread_make.jsp";
 
         } catch (Exception e) {
             e.printStackTrace();
             request.setAttribute("error_message", e.getMessage());
-            forwardURL = "/thread/error.jsp";
+            forwardURL = "/make/error.jsp";
         }
 
         // 表示ページへ転送

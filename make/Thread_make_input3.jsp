@@ -7,6 +7,16 @@
             スレッド作成
         </title>
         <link rel="stylesheet" type="text/css" href="css/thread_make.css">
+        <script>
+            function validateFrom() {
+                const checkboxes = document.querySelectorAll('input[name="tag"]:checked');
+                if(checkboxes.length === 0) {
+                    alert("タグを1つ以上選択してください。");
+                    return false;
+                }
+                return true;
+            }
+        </script>
     </head>
     <body>
         <div class="header">
@@ -14,7 +24,7 @@
         </div>
         <div class="container">
             <h1>スレッド作成</h1>
-            <form action="./ThreadMakeServlet2" method="POST">
+            <form action="./ThreadMakeServlet2" method="POST" onsubmit="return validateFrom()">
                 <h3>スレッドタイトル</h3>
                 <input type="text" size="50" maxlength="50" name="thread_title" required><br>
                 <br>

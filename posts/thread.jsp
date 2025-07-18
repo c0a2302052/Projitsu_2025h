@@ -17,9 +17,11 @@
   <link rel="stylesheet" href="<%= request.getContextPath() %>/posts/style.css">
 </head>
 <body>
-
-<header>TUT総合掲示板</header>
-
+<header>
+  <a href="./mainpage/ThreadListServlet" style="text-decoration: none; color:inherit;">
+    TUT総合掲示板
+  </a>
+</header>
 <div class="container">
   <div class="thread-title">
     <%= thread_title %>

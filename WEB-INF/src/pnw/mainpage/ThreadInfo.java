@@ -17,6 +17,12 @@ public class ThreadInfo {
     public List<String> getTags() { return tags; }
     public void setTags(List<String> tags) { this.tags = tags; }
 
-    public int getResponseCount() { return responseCount; }
-    public void setResponseCount(int responseCount) { this.responseCount = responseCount; }
+    public int getResponseCount() {
+        return responseCount;
+    }
+
+    public void setResponseCount(int responseCount) {
+        this.responseCount = responseCount;
+    }
+
 }

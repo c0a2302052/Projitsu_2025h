@@ -44,18 +44,16 @@ public class ThreadMakeServlet2 extends HttpServlet{
             String sqltopic = null;
             String sqlmap = null;
 
-            // フォームからのパラメータ取得
-            int in_id = 0;
-            if (request.getParameter("thread_id") != null) {
-                in_id = Integer.parseInt(request.getParameter("thread_id"));
-            }
 
+            // フォームからのパラメータ取得
             String title = request.getParameter("thread_title");
             String[] check_tag = request.getParameterValues("tag");
             ArrayList<Integer> tag = new ArrayList<>();
             if (check_tag != null) {
                 for (String t : check_tag) {
-                    tag.add(Integer.parseInt(t));
+                    if(t != null && !t.trim().isEmpty()) {
+                        tag.add(Integer.parseInt(t));
+                    }
                 }
             }
             String name = request.getParameter("name");
@@ -96,30 +94,9 @@ public class ThreadMakeServlet2 extends HttpServlet{
                 stmtmap.executeUpdate();
             }
 
-            // データ取得と表示用
-            String sql = "SELECT t.response_num, t.post_time, t.name, t.main_text, t.like_num, t.thread_id, i.thread_title " +
-                         "FROM threads_topic t JOIN threads_info i ON t.thread_id = i.thread_id " +
-                         "WHERE t.thread_id = ? ORDER BY t.post_time ASC";
-            PreparedStatement stmt = db.getStmt(sql);
-            stmt.setInt(1, mid);
-            rs = stmt.executeQuery();
-
-            ArrayList<InfoBean> infoArray = new ArrayList<>();
-            while (rs.next()) {
-                InfoBean bean = new InfoBean(
-                        title,
-                        rs.getInt("response_num"),
-                        rs.getTimestamp("post_time"),
-                        rs.getString("name"),
-                        rs.getString("main_text"),
-                        rs.getInt("like_num"),
-                        rs.getInt("thread_id")
-                );
-                infoArray.add(bean);
-            }
-
-            request.setAttribute("thread_info", infoArray);
-            forwardURL = "/make/Thread_make.jsp";
+            // 作成したThreadのページに飛ぶ
+            response.sendRedirect(request.getContextPath() + "/ThreadServlet?id=" + mid);
+            return;
 
         } catch (Exception e) {
             e.printStackTrace();

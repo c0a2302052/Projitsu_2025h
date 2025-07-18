@@ -9,8 +9,10 @@
         <link rel="stylesheet" type="text/css" href="css/thread_make.css">
     </head>
     <body>
+        <div class="header">
+            <a href="../mainpage/ThreadListServlet" style="text-decoration: none; color:inherit;">TUT総合掲示板</a>
+        </div>
         <div class="container">
-            <div class="header">TUT総合掲示板</div>
             <h1>スレッド作成</h1>
             <form action="./ThreadMakeServlet2" method="POST">
                 <h3>スレッドタイトル</h3>
@@ -31,7 +33,7 @@
                 <textarea name="text" rows="10" cols="80" required></textarea>
                 <div class="button-container">
                     <input type="submit" value="書き込む" class="submit-button">
-                </div>>
+                </div>
             </form>
         </div>
     </body>

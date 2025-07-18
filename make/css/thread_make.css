@@ -25,6 +25,12 @@ body {
     font-size: 18px;
 }
 
+.header a {
+    display: black;
+    text-decoration: none;
+    color: inherit;
+}
+
 h3, h4 {
     margin-bottom: 8px;
     margin-top: 15px;

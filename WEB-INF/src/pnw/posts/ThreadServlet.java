@@ -36,7 +36,7 @@ public class ThreadServlet extends HttpServlet{
         // HTTP応答のエンコード設定
         response.setContentType("text/html; charset=UTF-8");
 
-        String forwardURL = "./thread/thread.jsp";
+        String forwardURL = "./posts/thread.jsp";
         
         // スレッドIDの受取(リクエストパラメータ)
         Integer thread_id = Integer.parseInt(request.getParameter("id"));
